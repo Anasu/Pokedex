@@ -1,0 +1,13 @@
+@startuml flujo consulta dex
+start
+:input nombre o numero;
+if (es valido?) then (yes)
+  :trae el nombre y sprite;
+  :trae el grafico de los stats;
+else (no)
+  :Error 
+    "Pokemon no encontrado! 
+    Intenta de nuevo";
+endif
+end
+  @enduml
