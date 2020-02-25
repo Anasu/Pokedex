@@ -3,7 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-.consulta {
+body {
+  font-family: 'Lato', sans-serif;
+  color: darkslategray;
+}
+.consulta, .respuesta__contenido, .respuesta__grafico, .habilidad {
   display: -webkit-flex;
   display: flex;
   justify-content: center;
@@ -14,10 +18,6 @@
   border-bottom: 2px solid darkslategrey;
   padding: 2.5% 10%;
   box-shadow: black;   
-}
-.consulta__titulo, .consulta__instrucciones {
-  font-family: 'Lato', sans-serif;
-  color: darkslategray;
 }
 .consulta__titulo {
   font-size: 2rem;
@@ -39,4 +39,35 @@
   padding: 1.25% 2.5%;
   font-size: 1rem;
   margin: 0 5px;
+  font-family: 'Lato', sans-serif;
+  color: darkslategray;
+}
+.invisible {
+  display: none;
+}
+.respuesta__contenido {
+  align-items: center;
+}
+.respuesta__titulo {
+  text-transform: capitalize;
+}
+.respuesta__texto {
+  margin-left: 25px;
+}
+.habilidad__boton {
+  max-height: 2rem;
+  min-width: 5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-left: 25px;
+  font-family: 'Lato', sans-serif;
+  color: darkslategray;
+  border: 1px solid #a5a5a5;
+}
+.visible {
+  display: block;
+}
+#chartContainer{
+  height: 300px; 
+  width: 100%;
 }

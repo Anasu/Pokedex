@@ -6,7 +6,11 @@
   <title>Pokedex</title>
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"  
+          integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  
+          crossorigin="anonymous"></script>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  
 
 </head>
 <body>
@@ -20,8 +24,31 @@
       </form>
     </div>
   </section>
+  <section class="respuesta visible">
+    <div class="respuesta__contenido">
+      <img src="img/not-found.PNG" 
+           alt="Pokemon Sprite" 
+           class="respuesta__imagen"
+           id="pokeImg">
+      <div class="respuesta__texto" id="pokeData">
+        <h2 class="respuesta__titulo"></h2>
+        <p class="respuesta__descripcion"></p>
+      </div>
+    </div>
+    <div class="respuesta__grafico">
+      <div id="chartContainer"></div>
+    </div>
+    <div class="respuesta__habilidades">
+      <div class="habilidad">
+        <div class="habilidad__texto">
+          <h3></h3>
+          <p></p>
+        </div>
+        <button class="habilidad__boton"></button>
+      </div>
+    </div>
+  </section>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
   <script src="script/datoTest.js"></script>
   <script src="script/validacion.js"></script>
 </body>
