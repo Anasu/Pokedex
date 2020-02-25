@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.consulta {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+}
+.consulta__contenido{
+  background-color: white;
+  border-bottom: 2px solid darkslategrey;
+  padding: 2.5% 10%;
+  box-shadow: black;   
+}
+.consulta__titulo, .consulta__instrucciones {
+  font-family: 'Lato', sans-serif;
+  color: darkslategray;
+}
+.consulta__titulo {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.consulta__instrucciones {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+.consulta__formulario {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.consulta__formulario input{
+  padding: 1.25% 2.5%;
+  font-size: 1rem;
+  margin: 0 5px;
+}
