@@ -7,7 +7,7 @@ body {
   font-family: 'Lato', sans-serif;
   color: darkslategray;
 }
-.consulta, .respuesta__contenido, .respuesta__grafico, .habilidad {
+.consulta, .respuesta__contenido, .respuesta__grafico {
   display: -webkit-flex;
   display: flex;
   justify-content: center;
@@ -54,20 +54,16 @@ body {
 .respuesta__texto {
   margin-left: 25px;
 }
-.habilidad__boton {
-  max-height: 2rem;
-  min-width: 5rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  margin-left: 25px;
-  font-family: 'Lato', sans-serif;
-  color: darkslategray;
-  border: 1px solid #a5a5a5;
-}
 .visible {
   display: block;
 }
 #chartContainer{
-  height: 300px; 
-  width: 100%;
+  height: 300px;
+  width: 500px;
+}
+.respuesta__habilidades {
+  margin: 5vh; 
+}
+.habilidad__texto h3, .habilidad__texto p {
+  margin-bottom: 1rem;
 }
