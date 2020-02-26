@@ -67,3 +67,7 @@ body {
 .habilidad__texto h3, .habilidad__texto p {
   margin-bottom: 1rem;
 }
+.respuesta__habilidades_centrado {
+  display: flex;
+  justify-content: center;
+}
