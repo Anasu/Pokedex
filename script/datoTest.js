@@ -1,0 +1,1 @@
+let pokemon = 'estoy vacío';

@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  color: darkslategray;
+}
+.consulta, .respuesta__contenido, .respuesta__grafico {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+}
+.consulta__contenido{
+  background-color: white;
+  border-bottom: 2px solid darkslategrey;
+  padding: 2.5% 10%;
+  box-shadow: black;   
+}
+.consulta__titulo {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.consulta__instrucciones {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+.consulta__formulario {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.consulta__formulario input{
+  padding: 1.25% 2.5%;
+  font-size: 1rem;
+  margin: 0 5px;
+  font-family: 'Lato', sans-serif;
+  color: darkslategray;
+}
+.invisible {
+  display: none;
+}
+.respuesta__contenido {
+  align-items: center;
+}
+.respuesta__titulo {
+  text-transform: capitalize;
+}
+.respuesta__texto {
+  margin-left: 25px;
+}
+.visible {
+  display: block;
+}
+#chartContainer{
+  height: 300px;
+  width: 500px;
+}
+.respuesta__habilidades {
+  margin: 5vh; 
+}
+.habilidad__texto h3, .habilidad__texto p {
+  margin-bottom: 1rem;
+}
+.respuesta__habilidades_centrado {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokedex</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"  
+          integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  
+          crossorigin="anonymous"></script>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  
+
+</head>
+<body>
+  <section class="consulta">
+    <div class="consulta__contenido">
+      <h1 class="consulta__titulo">Pokedex Nacional</h1>
+      <p class="consulta__instrucciones">Ingresa el nombre o el número de un pokemon para consultar</p>
+      <form id="pokeform" class="consulta__formulario">
+        <input type="text" id="pokeInput" class="formulario__info">
+        <input type="submit" id="pokeSubmit" class="formulario__boton" value="Consultar">
+      </form>
+    </div>
+  </section>
+  <section id="respuesta" class="invisible">
+    <div class="respuesta__contenido">
+      <img src="img/not-found.PNG" 
+           alt="Pokemon Sprite" 
+           class="respuesta__imagen"
+           id="pokeImg">
+      <div class="respuesta__texto" id="pokeData">
+        <h2 class="respuesta__titulo"></h2>
+        <p class="respuesta__descripcion"></p>
+      </div>
+    </div>
+    <div class="respuesta__grafico" id="grafico">
+      <div id="chartContainer"></div>
+    </div>
+    <div class="respuesta__habilidades_centrado">
+      <div class="respuesta__habilidades" id="habilidades"></div> 
+    </div>
+  </section>
+
+  <script src="script/datoTest.js"></script>
+  <script src="script/validacion.js"></script>
+</body>
+</html>
