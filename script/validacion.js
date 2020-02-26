@@ -4,7 +4,7 @@ $(document).ready(function()
     {
         event.preventDefault();
         resetDex('#respuesta');
-        let consulta = $('#pokeInput').val();
+        let consulta = $('#pokeInput').val().toLowerCase().replace(' ','-');
         let request = $.ajax({
             url: `https://pokeapi.co/api/v2/pokemon/${consulta}`,
             method: "GET"
@@ -30,7 +30,7 @@ $(document).ready(function()
         });
         request.fail(function(request, statusText)
         {
-            console.log('poto');
+            errorMsg();
         });
     }); 	
 });
@@ -50,7 +50,8 @@ const resetDex = function(selector)
     $(`${selector} h2`).text('');
     $(`${selector} p`).text('');
     $(`${selector} img`).attr('src','img/not-found.PNG');
-    //dataPoints = [];
+    $('#grafico').attr('class','invisible');
+    $('#habilidades').attr('class','invisible');
 };
 
 const displayImg = function(selector, pokeID)
@@ -62,7 +63,7 @@ const displayImg = function(selector, pokeID)
 const displayData = function(selector, pokemon)
 {
     let id = pokemon.id;
-    let pokeNombre = pokemon.name;
+    let pokeNombre = pokemon.name.replace('-', ' ');
     $(`${selector} h2`).text(`#${id} - ${pokeNombre}`);
 };
 
@@ -74,14 +75,21 @@ const chart = new CanvasJS.Chart("chartContainer",
     title: {
         text: "Estadísticas base"              
     },
+    axisY:{
+        minimum: 0,
+        maximum: 255
+       },
     data: [{
         type: "column",
         dataPoints: dataPoints
     }]
 });
 
-const addData = function(data) {
-	for (let i = 0; i < data.stats.length; i++) {
+const addData = function(data) 
+{
+    $('#grafico').attr('class','respuesta__grafico');
+    for (let i = 0; i < data.stats.length; i++) 
+    {
         let j = data.stats.length - i -1;
 		dataPoints[j].y = data.stats[i].base_stat;
     };
@@ -92,6 +100,7 @@ const loadSpec = function(pokeSpec,index)
 {
     let abilTitle;
     let abilText;
+    $('#habilidades').attr('class','respuesta__habilidades');
     for(let flav_o of pokeSpec.names)
     {
         if(flav_o.language.name == "es")
@@ -113,4 +122,11 @@ const loadSpec = function(pokeSpec,index)
         `<div class="habilidad__texto" id="habilidad${index}">`+
         `<h3>${abilTitle}</h3><p>${abilText}</p></div>`);
 };
-
+const errorMsg = function()
+{
+    $('#respuesta').attr('class','visible');
+    $(`#pokeImg img`).attr('src','img/not-found.PNG');
+    $(`#pokeData h2`).text('Ups! Parece que hubo un problema');
+    $(`#pokeData p`).text('Por favor intenta nuevamente.');
+    
+}
